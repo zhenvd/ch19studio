@@ -1,0 +1,15 @@
+E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.GeneratedMSBuildEditorConfig.editorconfig
+E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.AssemblyInfoInputs.cache
+E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.AssemblyInfo.cs
+E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.csproj.CoreCompileInputs.cache
+E:\Educational\CSharp\ch19\ch19studio\bin\Debug\net5.0\ch19studio.exe
+E:\Educational\CSharp\ch19\ch19studio\bin\Debug\net5.0\ch19studio.deps.json
+E:\Educational\CSharp\ch19\ch19studio\bin\Debug\net5.0\ch19studio.runtimeconfig.json
+E:\Educational\CSharp\ch19\ch19studio\bin\Debug\net5.0\ch19studio.runtimeconfig.dev.json
+E:\Educational\CSharp\ch19\ch19studio\bin\Debug\net5.0\ch19studio.dll
+E:\Educational\CSharp\ch19\ch19studio\bin\Debug\net5.0\ref\ch19studio.dll
+E:\Educational\CSharp\ch19\ch19studio\bin\Debug\net5.0\ch19studio.pdb
+E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.dll
+E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ref\ch19studio.dll
+E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.pdb
+E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.genruntimeconfig.cache
