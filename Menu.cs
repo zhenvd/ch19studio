@@ -138,11 +138,15 @@ namespace ch19studio
             {
                 ViewMenu();
             }
-            else if (output == 2)
+            else if(output == 2)
+            {
+                ViewIndividualMenu();
+            }
+            else if (output == 3)
             {
                 AddItem();
             }
-            else if (output == 3)
+            else if (output == 4)
             {
                 RemoveItem();
             }
@@ -151,17 +155,71 @@ namespace ch19studio
                 System.Environment.Exit(0);
             }
         }
+        public static void ViewIndividualMenu()
+        {
+            Console.WriteLine("What kind of item would you like to view? (1) Appetizer, (2) Main Course, or (3) Dessert?");
+            int userInput = Int32.Parse(Console.ReadLine());
+            if (userInput == 1) //appetizer
+            {
+                Console.WriteLine("What is the name of the item you would like view?");
+                string name = Console.ReadLine();
 
+                for (int i = 0; i < Appetizers.Count; i++)
+                {
+                    if (name.Equals(Appetizers[i].NameOfItem))
+                    {
+                        Console.WriteLine($"{Appetizers[i].NameOfItem}....{Appetizers[i].Price}" +
+                            $"\nDescription: {Appetizers[i].Description}....Created on: {updatedOn}");
+                        Console.WriteLine("Press any enter to return to the main manu.");
+                        Console.ReadLine();
+                        MenuOptions(Choice());
+                    }
+                }
+            }
+            else if (userInput == 2) //main course
+            {
+                Console.WriteLine("What is the name of the item you would like view?");
+                string name = Console.ReadLine();
+                for (int i = 0; i < MainCourse.Count; i++)
+                {
+                    if (name.Equals(MainCourse[i].NameOfItem))
+                    {
+                        Console.WriteLine($"{MainCourse[i].NameOfItem}....{MainCourse[i].Price}" +
+                            $"\nDescription: {MainCourse[i].Description}....Created on: {updatedOn}");
+                        Console.WriteLine("Press any enter to return to the main manu.");
+                        Console.ReadLine();
+                        MenuOptions(Choice());
+                    }
+                }
+            }
+            else //dessert
+            {
+                Console.WriteLine("What is the name of the item you would like view?");
+                string name = Console.ReadLine();
+                for (int i = 0; i < Desserts.Count; i++)
+                {
+                    if (name.Equals(Desserts[i].NameOfItem))
+                    {
+                        Console.WriteLine($"{Desserts[i].NameOfItem}....{Desserts[i].Price}" +
+                            $"\nDescription: {Desserts[i].Description}....Created on: {updatedOn}");
+                        Console.WriteLine("Press any enter to return to the main manu.");
+                        Console.ReadLine();
+                        MenuOptions(Choice());
+                    }
+                }
+            }
+        }
         //initial menu input prompt
         public static int Choice()
         {
             Console.WriteLine("Welcome to some restaurant." +
                 "\nWhat would you like to do? Please enter a numeric selection:" +
                 "\n1 - View Menu: See all items/description/prices on menu" +
-                "\n2 - Add Menu Item: Add Menu Item" +
-                "\n3 - Remove Menu Item: Remove Menu Item" +
-                "\n4 - Exit: Exit the Program" +
-                "\n\nEnter 1, 2, 3, or 4: ");
+                "\n2 - View Individual Menu Item: See the details of an individual menu item." +
+                "\n3 - Add Menu Item: Add Menu Item" +
+                "\n4 - Remove Menu Item: Remove Menu Item" +
+                "\n5 - Exit: Exit the Program" +
+                "\n\nEnter 1, 2, 3, 4 or 5: ");
             string choiceString = Console.ReadLine();
             int intChoice;
             int output = 0;
@@ -170,9 +228,9 @@ namespace ch19studio
             {
                 if (int.TryParse(choiceString, out intChoice))
                 {
-                    while (intChoice < 1 || intChoice > 4)
+                    while (intChoice < 1 || intChoice > 5)
                     {
-                        Console.WriteLine("Please enter 1, 2, 3, or 4: ");
+                        Console.WriteLine("Please enter 1, 2, 3, 4 or 5: ");
                         choiceString = Console.ReadLine();
                         if (int.TryParse(choiceString, out intChoice))
                         {
