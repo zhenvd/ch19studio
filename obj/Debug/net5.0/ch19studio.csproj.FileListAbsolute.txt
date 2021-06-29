@@ -13,3 +13,4 @@ E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.dll
 E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ref\ch19studio.dll
 E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.pdb
 E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.genruntimeconfig.cache
+E:\Educational\CSharp\ch19\ch19studio\obj\Debug\net5.0\ch19studio.csproj.AssemblyReference.cache

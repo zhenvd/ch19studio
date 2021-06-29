@@ -97,6 +97,8 @@ namespace ch19studio
                     if (name.Equals(Appetizers[i].NameOfItem))
                     {
                         Appetizers.RemoveAt(i);
+                        Console.Clear();
+                        MenuOptions(Choice());
                     }
                 }
             }
@@ -109,6 +111,8 @@ namespace ch19studio
                     if (name.Equals(MainCourse[i].NameOfItem))
                     {
                         MainCourse.RemoveAt(i);
+                        Console.Clear();
+                        MenuOptions(Choice());
                     }
                 }
             }
@@ -121,6 +125,8 @@ namespace ch19studio
                     if (name.Equals(Desserts[i].NameOfItem))
                     {
                         Desserts.RemoveAt(i);
+                        Console.Clear();
+                        MenuOptions(Choice());
                     }
                 }
             }
