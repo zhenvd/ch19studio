@@ -50,6 +50,17 @@ namespace ch19studio
                 Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
                 MenuItem appetizers = new MenuItem(name, desc, category, price);
+                foreach(MenuItem item in Appetizers)
+                {
+                    if(item.NameOfItem.Equals(name))
+                    {
+                        Console.WriteLine($"{name} is already on the menu.");
+                        Console.ReadLine();
+                        Console.Clear();
+                        MenuOptions(Choice());
+
+                    }
+                }
                 Appetizers.Add(appetizers);
 
             }
@@ -63,6 +74,17 @@ namespace ch19studio
                 Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
                 MenuItem maincourse = new MenuItem(name, desc, category, price);
+                foreach (MenuItem item in MainCourse)
+                {
+                    if (item.NameOfItem.Equals(name))
+                    {
+                        Console.WriteLine($"{name} is already on the menu.");
+                        Console.ReadLine();
+                        Console.Clear();
+                        MenuOptions(Choice());
+
+                    }
+                }
                 MainCourse.Add(maincourse);
             }
             else
@@ -75,6 +97,17 @@ namespace ch19studio
                 Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
                 MenuItem desserts = new MenuItem(name, desc, category, price);
+                foreach (MenuItem item in Desserts)
+                {
+                    if (item.NameOfItem.Equals(name))
+                    {
+                        Console.WriteLine($"{name} is already on the menu.");
+                        Console.ReadLine();
+                        Console.Clear();
+                        MenuOptions(Choice());
+
+                    }
+                }
                 Desserts.Add(desserts);
             }
             updatedOn = DateTime.Today; //updatedOn would update everytime an item is added.
