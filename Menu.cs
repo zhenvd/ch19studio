@@ -26,6 +26,13 @@ namespace ch19studio
                 return "*new*";
             }
         }
+        //ItemAdded method for repeated console writes
+        public static void ItemAdded(string name)
+        {
+            Console.WriteLine($"{name} added to menu!");
+            Console.WriteLine("Press any enter to return to the main menu.");
+            Console.ReadLine();
+        }
         public static void ViewMenu()
         {
             
@@ -67,7 +74,7 @@ namespace ch19studio
                 Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
                 //DateTime creationdate = DateTime.Today;
-                DateTime creationdate = new DateTime(1999, 1, 1);
+                DateTime creationdate = new DateTime(1999, 1, 1); //to test my OldNew method
                 MenuItem appetizers = new MenuItem(name, desc, category, price, creationdate);
                 foreach(MenuItem item in Appetizers)
                 {
@@ -80,6 +87,7 @@ namespace ch19studio
 
                     }
                 }
+                ItemAdded(name);
                 Appetizers.Add(appetizers);
 
             }
@@ -105,6 +113,7 @@ namespace ch19studio
 
                     }
                 }
+                ItemAdded(name);
                 MainCourse.Add(maincourse);
             }
             else
@@ -129,6 +138,7 @@ namespace ch19studio
 
                     }
                 }
+                ItemAdded(name);
                 Desserts.Add(desserts);
             }
             updatedOn = DateTime.Today; //updatedOn would update everytime an item is added.
