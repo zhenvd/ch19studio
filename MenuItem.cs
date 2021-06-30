@@ -14,12 +14,13 @@ namespace ch19studio
         public double Price;
         public DateTime CreationDate = DateTime.Today;
 
-        public MenuItem(string name, string desc, string category, double price)
+        public MenuItem(string name, string desc, string category, double price, DateTime creationdate)
         {
             NameOfItem = name;
             Description = desc;
             Category = category;
             Price = price;
+            CreationDate = creationdate;
         }
 
 

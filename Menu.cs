@@ -12,26 +12,43 @@ namespace ch19studio
         public static List<MenuItem> MainCourse = new List<MenuItem>();
         public static List<MenuItem> Desserts = new List<MenuItem>();
         public static DateTime updatedOn = DateTime.Today;
-
+        //public static DateTime test = new DateTime(2021, 1, 1);
+        public static string OldNew(MenuItem item)
+        {
+            TimeSpan timespan = DateTime.Today - item.CreationDate;
+            int year = timespan.Days / 365;
+            if(year > 0)
+            {
+                return "*old*";
+            }
+            else
+            {
+                return "*new*";
+            }
+        }
         public static void ViewMenu()
         {
+            
             Console.WriteLine("***Appetizers***");
             foreach (MenuItem item in Appetizers)
             {
-                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}.... Item added on {item.CreationDate.Month}/{item.CreationDate.Day}/{item.CreationDate.Year}\n");
+                string oldNew = OldNew(item);
+                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}.... Item added on {item.CreationDate.Month}/{item.CreationDate.Day}/{item.CreationDate.Year}{oldNew}\n");
             }
             Console.WriteLine("***Main Course***");
             foreach (MenuItem item in MainCourse)
             {
-                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}.... Item added on {item.CreationDate.Month}/{item.CreationDate.Day}/{item.CreationDate.Year}\n");
+                string oldNew = OldNew(item);
+                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}.... Item added on {item.CreationDate.Month}/{item.CreationDate.Day}/{item.CreationDate.Year}{oldNew}\n");
             }
             Console.WriteLine("***Desserts***");
             foreach (MenuItem item in Desserts)
             {
-                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}.... Item added on {item.CreationDate.Month}/{item.CreationDate.Day}/{item.CreationDate.Year}\n");
+                string oldNew = OldNew(item);
+                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}.... Item added on {item.CreationDate.Month}/{item.CreationDate.Day}/{item.CreationDate.Year}{oldNew}\n");
             }
             Console.WriteLine($"\nMenu updated on {updatedOn.Month}/{updatedOn.Day}/{updatedOn.Year}");
-            Console.WriteLine("Press any enter to return to the main manu.");
+            Console.WriteLine("Press any enter to return to the main menu.");
             Console.ReadLine();
             Console.Clear();
             MenuOptions(Choice());
@@ -49,7 +66,9 @@ namespace ch19studio
                 double price = Double.Parse(Console.ReadLine());
                 Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
-                MenuItem appetizers = new MenuItem(name, desc, category, price);
+                //DateTime creationdate = DateTime.Today;
+                DateTime creationdate = new DateTime(1999, 1, 1);
+                MenuItem appetizers = new MenuItem(name, desc, category, price, creationdate);
                 foreach(MenuItem item in Appetizers)
                 {
                     if(item.NameOfItem.Equals(name))
@@ -73,7 +92,8 @@ namespace ch19studio
                 double price = Double.Parse(Console.ReadLine());
                 Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
-                MenuItem maincourse = new MenuItem(name, desc, category, price);
+                DateTime creationdate = DateTime.Today;
+                MenuItem maincourse = new MenuItem(name, desc, category, price, creationdate);
                 foreach (MenuItem item in MainCourse)
                 {
                     if (item.NameOfItem.Equals(name))
@@ -96,7 +116,8 @@ namespace ch19studio
                 double price = Double.Parse(Console.ReadLine());
                 Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
-                MenuItem desserts = new MenuItem(name, desc, category, price);
+                DateTime creationdate = DateTime.Today;
+                MenuItem desserts = new MenuItem(name, desc, category, price, creationdate);
                 foreach (MenuItem item in Desserts)
                 {
                     if (item.NameOfItem.Equals(name))
